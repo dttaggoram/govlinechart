@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lte-ie8" lang=""><![endif]-->
+<!--[if gt IE 8]><!--><html lang=""><!--<![endif]-->
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <title></title>
+
+    <script type="text/javascript">
+      (function(){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var d=document,c="appendChild",a=d.createElement("style");a[c](d.createTextNode("@-ms-viewport{width:auto!important}"));d.getElementsByTagName("head")[0][c](a);}})();
+    </script>
+
+    <!--[if gt IE 8]><!--><link href="stylesheets/govuk-template.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><!--<![endif]-->
+    <!--[if IE 6]><link href="stylesheets/govuk-template-ie6.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if IE 7]><link href="stylesheets/govuk-template-ie7.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if IE 8]><link href="stylesheets/govuk-template-ie8.css?0.12.0" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <link href="stylesheets/main.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/dashboard.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/d3.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="stylesheets/govuk-template-print.css?0.12.0" media="print" rel="stylesheet" type="text/css" />
+
+    <!--[if IE 8]>
+    <script type="text/javascript">
+      (function(){if(window.opera){return;}
+       setTimeout(function(){var a=document,g,b={families:(g=
+       ["nta"]),urls:["stylesheets/fonts-ie8.css?0.12.0"]},
+       c="javascripts/vendor/goog/webfont-debug.js?0.12.0",d="script",
+       e=a.createElement(d),f=a.getElementsByTagName(d)[0],h=g.length;WebFontConfig
+       ={custom:b},e.src=c,f.parentNode.insertBefore(e,f);for(;h=h-1;a.documentElement
+       .className+=' wf-'+g[h].replace(/\s/g,'').toLowerCase()+'-n4-loading');},0)
+      })()
+    </script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <link href="stylesheets/fonts.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+    <!--<![endif]-->
+
+
+    <!--[if lt IE 9]>
+      <script src="javascripts/ie.js?0.12.0" type="text/javascript"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="images/favicon.ico?0.12.0" type="image/x-icon" />
+
+    <!-- Size for iPad and iPad mini (high resolution) -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/apple-touch-icon-152x152.png?0.12.0">
+    <!-- Size for iPhone and iPod touch (high resolution) -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/apple-touch-icon-120x120.png?0.12.0">
+    <!-- Size for iPad 2 and iPad mini (standard resolution) -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/apple-touch-icon-76x76.png?0.12.0">
+    <!-- Default non-defined size, also used for Android 2.1+ devices -->
+    <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-60x60.png?0.12.0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="images/opengraph-image.png?0.12.0">
+
+    <style>
+  main { max-width: 960px; margin: 0 15px; }
+  @media (min-width: 641px) { main { margin: 0 30px; } }
+  @media (min-width: 1020px) { main { margin: 0 auto; } }
+</style>
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.line {
+  fill: none;
+  stroke: #097F96;
+  stroke-width: 3px;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.focus circle {
+  fill: none;
+  stroke: #097F96;
+  stroke-width: 2px;
+}
+
+</style>
+  </head>
+
+  <body class="">
+    <script type="text/javascript">document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    
+    <header role="banner" id="global-header" class="with-proposition">
+      <div class="header-wrapper">
+        <div class="header-global">
+          <div class="header-logo">
+            <a href="https://www.gov.uk/" title="Go to the GOV.UK homepage" id="logo" class="content">
+              <img src="images/gov.uk_logotype_crown.png?0.12.0" width="35" height="31" alt="">Mock GOV.UK
+            </a>
+          </div>
+          
+        </div>
+        <div class='header-proposition'>
+          <div class='content'>
+            <a href='#proposition-links' class='js-header-toggle menu'>Menu</a>
+            <nav id='proposition-menu'>
+              <a href='#' id='proposition-name'>Dashboard</a>
+              <ul id='proposition-links'>
+                <li></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--end header-->
+    
+
+    
+
+    <div id="global-header-bar">
+      <div class="inner-block">
+        <div class="header-bar"></div>
+      </div>
+    </div>
+    <!--end global-header-bar-->
+
+    <main role="main">
+      <div class="header">
+        <div class="phase-banner">
+          <p>
+            <strong class="phase-tag">Alpha</strong>
+            <span>This is a new service – your <a href="mailto:test@test.com">feedback</a> will help us to improve it.</span>
+          </p>
+        </div>
+
+        <div id="global-breadcrumb">
+          <ol class="group">
+            <li>
+            <a href="services-summary.html">
+            <span title="Services Summary">
+            Services Summary
+            </span>
+            </a>
+            </li>
+            <li>
+            <span id="breadcrumb-label">
+            
+            </span>
+            </li>
+          </ol>
+        </div>
+
+        <h1 class="bold-xlarge">
+          <span class="strapline">Dashboard</span>
+          <span id="title"></span>
+        </h1>
+        <p class="tagline">
+            
+        </p>
+      </div>
+
+
+      <div class="grid-row topborder">
+        <h2 class="bold-medium">Live System Data?</h2>
+        <div class="tab">
+          <ol>
+            <li class="active" id="minutesbutton"><a>60 minutes</a></li>
+            <li class id="hoursbutton"><a>24 hours</a></li>
+            <li class id="daysbutton"><a>30 days</a></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="grid-row" style="margin-left: 0.5em; margin-right: 0.5em; margin-top: 1em;">
+        <div id="minutes" class="">Minutes</div>
+        <div id="hours" class="hidden">Hours</div>
+        <div id="days" class="hidden">Days</div>
+      </div>
+
+
+      <div class="grid-row">
+        <div class="column-third">
+          <div class="topborder">
+            <h2 class="bold-medium">Performance</h2>
+            <h2 id="sysavailability" class="bold-xxlarge highlight"></h2>
+            <p class="font-xsmall">System Availability</p>
+            <p class="font-small"><span id="syscost" class="bold-medium highlight"></span> Man Days Lost</p>
+          </div>
+        </div>
+        <div class="column-two-thirds">
+          <div class="topborder">
+            <h2 class="bold-medium">Change</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Period</th>
+                  <th>High Impact</th>
+                  <th>Overall</th>
+                </tr>
+              </thead>
+              <tr class="font-small">
+                <td>Last Week:</td>
+                <td><span id="highimpactlast" class="bold-medium highlight"></span></td>
+                <td><span id="overalllast" class="bold-medium highlight"></span></td>
+              </tr>
+              <tr class="font-small">
+                <td>This Week:</td>
+                <td><span id="highimpact" class="bold-medium highlight"></span></td>
+                <td><span id="overall" class="bold-medium highlight"></span></td>
+              </tr>
+              <tr class="font-small">
+                <td class="noborder">Next Week:</td>
+                <td class="noborder"><span id="highimpactnext" class="bold-medium highlight"></span></td>
+                <td class="noborder"><span id="overallnext" class="bold-medium highlight"></span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-row">
+        <div class="topborder">
+          <h2 class="bold-medium">Incidents and Problems</h2>
+          <p class="tagline">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum condimentum pretium diam eu luctus. Nullam et porta ligula. Aliquam commodo ultricies pretium. Ut vitae semper ipsum, sed vulputate dui. Quisque id arcu quis nibh dapibus hendrerit. Vivamus vel tortor porta, vulputate ligula vitae, cursus elit. Aliquam at urna ut ex dapibus molestie nec ut purus. Quisque lacus est, venenatis et accumsan id, fringilla in justo. Nunc dapibus massa in turpis imperdiet, in dapibus odio finibus. Maecenas in mauris et nisl vestibulum laoreet et non dolor. Proin congue orci sit amet tempus maximus. Curabitur mauris ipsum, ornare eu lacus a, dignissim congue elit. Proin a nulla quis libero hendrerit porttitor. Sed erat nisl, porttitor eget rutrum non, suscipit a nulla. Ut et ex orci. Pellentesque eget sem turpis.
+          </p>
+
+
+      <div id="incidentsbyhour"></div>
+      <div style="margin-top:50px" class="topborder">
+        <h2 class="bold-medium">Incidents Yesterday compared to Incidents on the Same Day Last Week</h2>
+        <p class="font-xsmall">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum condimentum pretium diam eu luctus. Nullam et porta ligula. Aliquam commodo ultricies pretium. Ut vitae semper ipsum, sed vulputate dui. Quisque id arcu quis nibh dapibus hendrerit. Vivamus vel tortor porta, vulputate ligula vitae, cursus elit. Aliquam at urna ut ex dapibus molestie nec ut purus. </p>
+      </div>
+      <div id="incidents"></div>
+      <div style="margin-top:50px" class="topborder">
+        <h2 class="bold-medium">Yesterday's Incidents</h2>
+        <p class="font-xsmall">Quisque lacus est, venenatis et accumsan id, fringilla in justo. Nunc dapibus massa in turpis imperdiet, in dapibus odio finibus. Maecenas in mauris et nisl vestibulum laoreet et non dolor. Proin congue orci sit amet tempus maximus. Curabitur mauris ipsum, ornare eu lacus a, dignissim congue elit. Proin a nulla quis libero hendrerit porttitor. Sed erat nisl, porttitor eget rutrum non, suscipit a nulla. Ut et ex orci. Pellentesque eget sem turpis.</p>
+      </div>
+      <div id="incidentsbelow"></div>
+        <h3 class="bold-medium">Top 5 Problems</h3>
+        <ul id="topproblems"></ul>
+      </div>
+      <div style="margin-top:50px"></div>
+
+    </main>
+
+
+    <footer class="group js-footer" id="footer" role="contentinfo">
+
+      <div class="footer-wrapper">
+        
+
+        <div class="footer-meta">
+          <div class="footer-meta-inner">
+            
+
+            <div class="open-government-licence">
+              <p class="logo"><a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a></p>
+              <p>Mock license... All content is available under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated</p>
+            </div>
+          </div>
+
+          <div class="copyright">
+            <a href="https://www.nationalarchives.gov.uk/information-management/our-services/crown-copyright.htm">&copy; Crown copyright</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!--end footer-->
+
+
+  <script src="javascripts/govuk-template.js"></script>
+  <script src="javascripts/d3.v3.min.js"></script>
+  <script src="javascripts/vendor/jquery-1.11.0.min.js"></script>
+  <script src="javascripts/monitoringgraphs.js"></script>
+ 
+  </body>
+</html>
+

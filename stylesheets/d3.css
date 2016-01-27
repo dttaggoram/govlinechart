@@ -1,0 +1,90 @@
+.bar {
+  fill: #c1dfe4;
+}
+
+.bar:hover {
+  fill: #097F96;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+    color: #000;
+
+}
+
+.tick text {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+}
+
+.incidentslabels {
+    font-size: 14px;
+
+}
+
+.arc path {
+  stroke: #000;
+}
+
+.legend {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  fill: #000;
+}
+
+.heading {
+  font-size: 20px;
+}
+
+.largeheading {
+  font-size: 24px;
+}
+
+.subunit.SCT { fill: #ddc; }
+.subunit.WLS { fill: #cdd; }
+.subunit.NIR { fill: #cdc; }
+.subunit.ENG { fill: #dcd; }
+
+.subunit.IRL,
+.subunit-label.IRL {
+  display: none;
+}
+
+.subunit-boundary {
+  fill: none;
+  stroke: #777;
+  stroke-dasharray: 2,2;
+  stroke-linejoin: round;
+}
+
+.subunit-boundary.IRL {
+  stroke: #aaa;
+}
+
+.subunit-label {
+  fill: #777;
+  fill-opacity: .5;
+  font-size: 20px;
+  font-weight: 300;
+  text-anchor: middle;
+}
+
+.subunit .active {
+  fill: orange;
+}
+
+.place,
+.place-label {
+  fill: #fff;
+}
+
+
+
+  
